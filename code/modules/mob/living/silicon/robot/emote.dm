@@ -59,6 +59,36 @@
 	message = "blares an alarm!"
 	sound = 'sound/machines/warning-buzzer.ogg'
 
+/datum/emote/sound/silicon/borgno
+	key = "no2"
+	key_third_person = "emits a negative boop."
+	message = "emits a negative boop."
+	sound = 'sound/machines/borg_no.ogg'
+
+/datum/emote/sound/silicon/borgyes
+	key = "no2"
+	key_third_person = "emits a positive boop."
+	message = "emits a positive boop."
+	sound = 'sound/machines/borg_yes.ogg'
+
+/datum/emote/sound/silicon/borgsadping
+	key = "sadping1"
+	key_third_person = "pings sadly."
+	message = "pings sadly."
+	sound = 'sound/machines/sadping1.ogg'
+
+/datum/emote/sound/silicon/borgpassiveping
+	key = "passiveping1"
+	key_third_person = "pings."
+	message = "pings."
+	sound = 'sound/machines/passiveping1.ogg'
+	
+/datum/emote/sound/silicon/borgwhine
+	key = "borgwhine"
+	key_third_person = "emits a whiny ping!"
+	message = "emits a whiny ping!"
+	sound = 'sound/machines/borgwhine.ogg'
+
 /mob/living/silicon/robot/verb/powerwarn()
 	set category = "Robot Commands"
 	set name = "Power Warning"

@@ -255,3 +255,115 @@
 	user.nextsoundemote = world.time + 7
 	var/path = pick(list('modular_citadel/sound/voice/bark.ogg', 'modular_citadel/sound/voice/bark1.ogg', 'modular_citadel/sound/voice/bark2.ogg'))
 	playsound(user, path, 50, 1, -1)
+
+/datum/emote/living/buzz1
+	key = "buzz1"
+	key_third_person = "buzzes."
+	message = "buzzes."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/buzz1/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/buzz-sigh.ogg', 50, 1, -1)
+	. = ..()
+	
+/datum/emote/living/pingsynth
+	key = "ping1"
+	key_third_person = "pings!"
+	message = "pings!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/ping/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/ping.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/synthwhine
+	key = "swhine"
+	key_third_person = "emits a whiny ping!"
+	message = "emits a whiny ping!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/synthwhine/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/robotwhine.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/synthno
+	key = "no"
+	key_third_person = "emits a negative boop."
+	message = "emits a negative boop."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/synthno/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/synth_no.ogg', 50, 1, -1)
+	. = ..()
+	
+/datum/emote/living/synthyes
+	key = "yes"
+	key_third_person = "emits a positive boop."
+	message = "emits a positive boop."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/synthyes/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/synth_yes.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/buzzunamused
+	key = "buzz3"
+	key_third_person = "buzzes."
+	message = "buzzes."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/buzzunamused/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/buzz-two.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/saddefib //yes i know but this is hilarious trust me
+	key = "sadping"
+	key_third_person = "sadly pings."
+	message = "sadly pings."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/saddefib/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/sadping.ogg', 50, 1, -1)
+	. = ..()
+	
+/datum/emote/living/happydefib
+	key = "passiveping"
+	key_third_person = "pings."
+	message = "pings."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/happydefib/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'modular_citadel/sound/voice/passiveping.ogg', 50, 1, -1)
+	. = ..()
