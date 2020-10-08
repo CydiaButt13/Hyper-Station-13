@@ -89,6 +89,16 @@
 	message = "emits a whiny ping!"
 	sound = 'sound/machines/borgwhine.ogg'
 
+/datum/emote/sound/silicon/borgscream
+	key = "borgscream"
+	key_third_person = "emits a strange static!"
+	message = "emits a strange static!"
+	sound = 'sound/machines/borgscream.ogg'
+
+/datum/emote/sound/silicon/borgwhine/run_emote()
+	sound = pick('sound/machines/borgscream.ogg', 'sound/machines/borgscream2.ogg')
+	..()
+
 /mob/living/silicon/robot/verb/powerwarn()
 	set category = "Robot Commands"
 	set name = "Power Warning"

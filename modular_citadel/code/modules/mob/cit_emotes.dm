@@ -367,3 +367,18 @@
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'modular_citadel/sound/voice/passiveping.ogg', 50, 1, -1)
 	. = ..()
+
+/datum/emote/living/synthscream
+	key = "rscream"
+	key_third_person = "emits odd static!"
+	message = "emits odd static!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/synthscream/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		var/path = pick(list('modular_citadel/sound/voice/robotscream.ogg', 'modular_citadel/sound/voice/robotscream2.ogg'))
+		playsound(user, path, 50, 1, -1)
+	. = ..()
