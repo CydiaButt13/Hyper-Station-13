@@ -257,7 +257,7 @@
 	playsound(user, path, 50, 1, -1)
 
 /datum/emote/living/buzz1
-	key = "buzz1"
+	key = "buzz"
 	key_third_person = "buzzes."
 	message = "buzzes."
 	emote_type = EMOTE_AUDIBLE
@@ -271,7 +271,7 @@
 	. = ..()
 	
 /datum/emote/living/pingsynth
-	key = "ping1"
+	key = "ping"
 	key_third_person = "pings!"
 	message = "pings!"
 	emote_type = EMOTE_AUDIBLE
@@ -327,7 +327,7 @@
 	. = ..()
 
 /datum/emote/living/buzzunamused
-	key = "buzz3"
+	key = "buzz2"
 	key_third_person = "buzzes."
 	message = "buzzes."
 	emote_type = EMOTE_AUDIBLE

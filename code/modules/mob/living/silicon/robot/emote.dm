@@ -12,14 +12,14 @@
 	message = "boops."
 
 /datum/emote/sound/silicon/buzz
-	key = "buzz"
+	key = "buzzborg"
 	key_third_person = "buzzes"
 	message = "buzzes."
 	message_param = "buzzes at %t."
 	sound = 'sound/machines/buzz-sigh.ogg'
 
 /datum/emote/sound/silicon/buzz2
-	key = "buzz2"
+	key = "buzz2borg"
 	message = "buzzes twice."
 	sound = 'sound/machines/buzz-two.ogg'
 
@@ -37,7 +37,7 @@
 	sound = 'sound/items/bikehorn.ogg'
 
 /datum/emote/sound/silicon/ping
-	key = "ping"
+	key = "pingborg"
 	key_third_person = "pings"
 	message = "pings."
 	message_param = "pings at %t."
@@ -58,48 +58,52 @@
 	key = "warn"
 	message = "blares an alarm!"
 	sound = 'sound/machines/warning-buzzer.ogg'
-
+	
 /datum/emote/sound/silicon/borgno
-	key = "no2"
+	key = "noborg"
 	key_third_person = "emits a negative boop."
 	message = "emits a negative boop."
 	sound = 'sound/machines/borg_no.ogg'
 
 /datum/emote/sound/silicon/borgyes
-	key = "no2"
+	key = "yesborg"
 	key_third_person = "emits a positive boop."
 	message = "emits a positive boop."
 	sound = 'sound/machines/borg_yes.ogg'
 
 /datum/emote/sound/silicon/borgsadping
-	key = "sadping1"
+	key = "sadpingborg"
 	key_third_person = "pings sadly."
 	message = "pings sadly."
 	sound = 'sound/machines/sadping1.ogg'
 
 /datum/emote/sound/silicon/borgpassiveping
-	key = "passiveping1"
+	key = "passivepingborg"
 	key_third_person = "pings."
 	message = "pings."
 	sound = 'sound/machines/passiveping1.ogg'
 	
 /datum/emote/sound/silicon/borgwhine
-	key = "borgwhine"
+	key = "swhineborg"
 	key_third_person = "emits a whiny ping!"
 	message = "emits a whiny ping!"
 	sound = 'sound/machines/borgwhine.ogg'
 
 /datum/emote/sound/silicon/borgscream
-	key = "borgscream"
+	key = "screamborg"
 	key_third_person = "emits a strange static!"
 	message = "emits a strange static!"
 	sound = 'sound/machines/borgscream.ogg'
+	playsound(user, path, 50, 1, -1)
+	
+/datum/emote/sound/silicon/borgscream2
+	key = "screamborg2"
+	key_third_person = "emits a strange static!"
+	message = "emits a strange static!"
+	sound = 'sound/machines/borgscream2.ogg'
+	playsound(user, path, 50, 1, -1)
 
-/datum/emote/sound/silicon/borgwhine/run_emote()
-	sound = pick('sound/machines/borgscream.ogg', 'sound/machines/borgscream2.ogg')
-	..()
-
-/mob/living/silicon/robot/verb/powerwarn()
+/mob/living/silicon/robot/proc/powerwarn()
 	set category = "Robot Commands"
 	set name = "Power Warning"
 
